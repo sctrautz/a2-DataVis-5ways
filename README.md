@@ -3,31 +3,31 @@
 
 ## JavaScript + D3
 
-I used d3 to build the scatterplot directly in the browser with an SVG. It was easy to map color and size once the scales were set up, but the harder part was handling async CSV loading and keeping ticks consistent while adding hover behavior. I could see d3 being best for highly customized, interactive visualizations on the web. The main “hack” was manually tuning domains/ticks to align with the reference.
+I built the scatterplot in the browser with SVG. It was easy to map color and size after the scales were set, but the harder part was loading the CSV asynchronously and keeping ticks consistent while adding hover. I could see d3 being useful when you need custom interactions on the web. The main workaround was manually setting domains and tick values to match the reference.
 
 <img src="img/d3-new.png" alt="d3" width="600">
 
 ## R + ggplot2
 
-ggplot2 made the visual mapping straightforward using aesthetics for x, y, color, and size. It was easy to get a clean baseline chart, while the more difficult part was tuning axis limits and tick breaks to match the non‑zero scales. ggplot2 feels ideal for quick, publication‑style plots. I did clamp bill length for consistent sizing and used explicit scale breaks to match the reference.
+ggplot2 made the basic chart quick to build using aesthetics for x, y, color, and size. The harder part was tuning axis limits and tick breaks to match the non‑zero scales. I could see ggplot2 being useful for quick, clean plots in reports or papers. I limited bill length to a fixed range for consistent sizing and set explicit scale breaks to match the reference.
 
 <img src="img/r-ggplot2.png" alt="d3" width="600">
 
 ## Python + Altair
 
-Altair’s declarative syntax made it easy to replicate the scatterplot with the right encodings. The toughest part was matching axis domains and tick values, but once that was set the rest was simple. I’d use Altair for rapid, interactive prototypes; the hover highlight + tooltip were easy to add. The only real tweak was explicit domain/tick control.
+Altair’s declarative style made the encodings easy to set. The hardest part was matching axis domains and tick values. I could see Altair being useful for quick interactive prototypes. The hover highlight and tooltip were easy to add. The main tweak was setting explicit domains and tick values.
 
 <img src="img/altair.png" alt="d3" width="600">
 
 ## JSON + Vega-Lite
 
-Vega‑Lite was approachable because the spec is compact and mirrors the visual encodings directly. It was easy to add gridlines and legends, but I had to be precise about axis domains and tick values to match the rubric. I can see Vega‑Lite being useful for portable, declarative specs that render anywhere. The only “hack” was setting explicit tick values to enforce 1000‑unit steps, plus a simple hover selection for interaction.
+Vega‑Lite is compact and maps directly to the encodings. Gridlines and legends were easy, but matching axis domains and tick values took more effort. I could see Vega‑Lite being useful when you want a small, portable spec that can render in different places. The main tweak was setting explicit tick values for 1000‑unit steps, plus a simple hover selection for interaction.
 
 <img src="img/vega.png" alt="d3" width="600">
 
 ## Python + Plotly
 
-Plotly was straightforward for quick charts with polished defaults. It was easy to set ranges, gridlines, and consistent colors; the tricky part was getting tick spacing and legend layout to match the other tools. I’d use Plotly for dashboards or rapid sharing. The main adjustment was nudging margins and the legend position to avoid label clipping.
+Plotly made a polished chart quickly. Setting ranges, gridlines, and colors was easy; matching tick spacing and the legend layout took more work. I could see Plotly being useful for dashboards. The main adjustment was nudging margins and the legend position to avoid clipping.
 
 <img src="img/plotly.png" alt="d3" width="600">
 
