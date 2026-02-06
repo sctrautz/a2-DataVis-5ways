@@ -34,7 +34,7 @@ Plotly made it easy to produce a polished chart quickly. Setting ranges, gridlin
 
 ## Technical Achievements
 - **Hover interactions**: Built tooltips + hover highlights in d3, Altair, and Vega‑Lite so you can inspect values without changing the chart.
-- **Explicit scales**: Set non‑zero domains and tick values in each tool to mirror the reference chart.
+- **Explicit scales**: Set non-zero domains and specified tick values/breaks in each tool to match the reference as closely as possible.
 - **Data cleaning**: Filtered out rows with missing values so only valid points were plotted.
 
 ### Design Achievements
